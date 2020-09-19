@@ -2,9 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 
+let welcome = (user) => {
+    if (user) {
+        return <h1>Hello {user}!</h1>
+    } else {
+        return <h1>Hell World!</h1>
+    }
+}
+
 ReactDOM.render(
     <React.StrictMode>
-        <h1>Hell World!</h1>
+        {welcome("Divakar")}
     </React.StrictMode>,
     document.getElementById('root')
 );
