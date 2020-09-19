@@ -1,21 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
-
-let welcome = (user) => {
-    if (user) {
-        return <h1>Hello {user}!</h1>
-    } else {
-        return <h1>Hell World!</h1>
-    }
-}
+import Timer from './Timer';
+import Welcome from './Welcome';
 
 let tick = () => {
-    const time = (<span>{new Date().toLocaleTimeString()}</span>);
     ReactDOM.render(
         <React.StrictMode>
-            {welcome("Divakar")}
-            <p><bold>Time: </bold>{time}</p>
+            {<Welcome name="Divakar" />}
+            {<Timer date={new Date()} />}
         </React.StrictMode>,
         document.getElementById('root')
     );
