@@ -10,12 +10,19 @@ let welcome = (user) => {
     }
 }
 
-ReactDOM.render(
-    <React.StrictMode>
-        {welcome("Divakar")}
-    </React.StrictMode>,
-    document.getElementById('root')
-);
+let tick = () => {
+    const time = (<span>{new Date().toLocaleTimeString()}</span>);
+    ReactDOM.render(
+        <React.StrictMode>
+            {welcome("Divakar")}
+            <p><bold>Time: </bold>{time}</p>
+        </React.StrictMode>,
+        document.getElementById('root')
+    );
+}
+
+setInterval(
+    tick, 1000);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
