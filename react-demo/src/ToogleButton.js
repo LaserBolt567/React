@@ -1,4 +1,5 @@
 import React from 'react';
+import { InfoBanner, WarnBanner } from './Banner';
 
 export default class ToggleButton extends React.Component {
 
@@ -30,6 +31,8 @@ export default class ToggleButton extends React.Component {
             <div>
                 Toggle State: {this.state.isToggleOn ? 'ON' : 'OFF'}
                 <button onClick={this.handleClick}>Click Me</button>
+                <InfoBanner level={this.state.isToggleOn ? 'info' : 'warn'} />
+                <WarnBanner level={this.state.isToggleOn ? 'info' : 'warn'} />
             </div>
         );
     }
