@@ -6,6 +6,7 @@ import Welcome from './Welcome';
 import ToggelButton from './ToogleButton';
 import LinkAction from './LinkAction';
 import Users from './Users';
+import Temperature from './Temperature';
 
 ReactDOM.render(
     <React.StrictMode>
@@ -15,6 +16,7 @@ ReactDOM.render(
         <ToggelButton />
         <LinkAction />
         <Users />
+        <Temperature />
     </React.StrictMode>,
     document.getElementById('root')
 );
