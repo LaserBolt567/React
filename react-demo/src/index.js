@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
-import Timer from './Timer';
+import Clock from './Clock';
 import Welcome from './Welcome';
 
 let tick = () => {
     ReactDOM.render(
         <React.StrictMode>
-            {<Welcome name="Divakar" />}
-            {<Timer date={new Date()} />}
+            {<Welcome />}
+            {<Clock />}
         </React.StrictMode>,
         document.getElementById('root')
     );
