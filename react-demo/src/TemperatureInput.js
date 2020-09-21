@@ -8,7 +8,7 @@ let code = {
 export default function TemperatureInput(props) {
     return (
         <tr>
-            <td>{code[props.tempType]}:</td>    <td><input type='text' value={props.tempValue} onChange={props.handleChange}></input></td>
+            <td>{code[props.tempType]}:</td><td><input type='text' value={props.tempValue} onChange={props.handleChange}></input></td>
         </tr>
     );
 }

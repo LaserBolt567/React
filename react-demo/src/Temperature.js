@@ -7,6 +7,7 @@ export default class Temperature extends React.Component {
         super(props);
         this.state = {
             celsius: 0,
+            fahrenheit: 32,
         }
     }
 
@@ -46,10 +47,12 @@ export default class Temperature extends React.Component {
 
     render() {
         return (
-            <div heat-temp>
-                <TemperatureInput tempType='c' tempValue={this.state.celsius} handleChange={this.handleCelsiusChange} />
-                <TemperatureInput tempType='c' tempValue={this.state.fahrenheit} handleChange={this.handleFahrenheitChange} />
-            </div>
+            <table>
+                <tbody className='heat-temp'>
+                    <TemperatureInput tempType='c' tempValue={this.state.celsius} handleChange={this.handleCelsiusChange} />
+                    <TemperatureInput tempType='f' tempValue={this.state.fahrenheit} handleChange={this.handleFahrenheitChange} />
+                </tbody>
+            </table>
         );
     }
 }
