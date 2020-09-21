@@ -1,4 +1,5 @@
 import React from 'react';
+import TemperatureInput from './TemperatureInput';
 
 export default class Temperature extends React.Component {
 
@@ -46,10 +47,8 @@ export default class Temperature extends React.Component {
     render() {
         return (
             <div heat-temp>
-                <tr>
-                    <td>Celsius:</td>    <td><input type='text' value={this.state.celsius} onChange={this.handleCelsiusChange}></input></td>
-                </tr>
-                <td>Fahrenheit:</td> <td><input type='text' value={this.state.fahrenheit} onChange={this.handleFahrenheitChange}></input></td>
+                <TemperatureInput tempType='c' tempValue={this.state.celsius} handleChange={this.handleCelsiusChange} />
+                <TemperatureInput tempType='c' tempValue={this.state.fahrenheit} handleChange={this.handleFahrenheitChange} />
             </div>
         );
     }
