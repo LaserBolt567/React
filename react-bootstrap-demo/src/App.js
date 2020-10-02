@@ -1,14 +1,14 @@
 import React from 'react';
-import AppNavbar from './AppNavbar';
-import Welcome from './welcome/Welocme';
+import AppHeader from './AppHeader';
+import AppMain from './welcome/AppMain';
 
 function App() {
   console.log("Rendering App...");
   return (
-    < div className="reactstrap-demo" >
-      <AppNavbar />
-      <Welcome />
-    </div >
+    <React.Fragment>
+      <AppHeader />
+      <AppMain />
+    </React.Fragment>
   );
 }
 

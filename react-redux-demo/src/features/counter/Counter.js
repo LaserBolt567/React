@@ -8,6 +8,7 @@ import {
   selectCount,
 } from './counterSlice';
 import styles from './Counter.module.css';
+import Button from 'react-bootstrap/Button';
 
 export function Counter() {
   const count = useSelector(selectCount);
@@ -17,21 +18,20 @@ export function Counter() {
   return (
     <div>
       <div className={styles.row}>
-        <button
-          className={styles.button}
+        <Button
           aria-label="Increment value"
           onClick={() => dispatch(increment())}
         >
           +
-        </button>
+        </Button>
         <span className={styles.value}>{count}</span>
-        <button
-          className={styles.button}
+        <Button
+          className={styles.Button}
           aria-label="Decrement value"
           onClick={() => dispatch(decrement())}
         >
           -
-        </button>
+        </Button>
       </div>
       <div className={styles.row}>
         <input
@@ -40,20 +40,20 @@ export function Counter() {
           value={incrementAmount}
           onChange={e => setIncrementAmount(e.target.value)}
         />
-        <button
-          className={styles.button}
+        <Button
+          className={styles.Button}
           onClick={() =>
             dispatch(incrementByAmount(Number(incrementAmount) || 0))
           }
         >
           Add Amount
-        </button>
-        <button
+        </Button>
+        <Button
           className={styles.asyncButton}
           onClick={() => dispatch(incrementAsync(Number(incrementAmount) || 0))}
         >
           Add Async
-        </button>
+        </Button>
       </div>
     </div>
   );

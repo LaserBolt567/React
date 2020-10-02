@@ -7,13 +7,13 @@ import SignUpButton from "./welcome/SignUpButton";
 import SignInButton from "./welcome/SignInButton";
 import ficus_club_logo from './ficus_club_logo.svg';
 
-export default function AppNavbar() {
+export default function AppHeader() {
     console.log("Rendering Navbar...");
     return (
-        <Navbar bg='dark' variant='dark' expand='md'>
-            <Navbar.Brand href="/home">
+        <Navbar bg='dark' variant='dark' expand='md' as="header" sticky="top" className="root-header">
+            <Navbar.Brand href="/home" className='rounded border border-light'>
                 <img className="d-inline-block align-top" alt="Ficus Club Logo" src={ficus_club_logo} width="45" height="35" />{' '}
-                <span>FicusClub</span>
+                <span className="pr-2">FicusClub</span>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">

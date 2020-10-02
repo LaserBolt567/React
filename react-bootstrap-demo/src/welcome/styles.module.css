@@ -1,0 +1,11 @@
+.main_contacts {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    position: fixed;
+}
+
+.contacts_search {
+    height: 100%;
+    width: 75%
+}
